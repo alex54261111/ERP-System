@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ispan.eeit69</groupId>
-	<artifactId>CCOProj</artifactId>
+	<artifactId>ERPProj</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>CCOProj</name>
 	<description>Demo project for Spring Boot</description>
