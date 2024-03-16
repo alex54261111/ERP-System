@@ -15,6 +15,7 @@ import java.util.Map;
 
 @RestController
 public class RegisterUserController {
+
     @Autowired
     private UserServerImpl userServer;
 

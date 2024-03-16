@@ -51,17 +51,15 @@ public class UserServerImpl implements UserServer {
 
     @Override
     public boolean registerUser(String user, String password) {
-        try {
-            newUser.setUsername(user);
-            newUser.setPassword(password);
-            userRepo.save(newUser);
-            System.out.println("開始註冊Impl");
-            return true;
-        }catch (Exception e){
-            System.out.println(e.toString());
-            return false;
-        }finally {
-            System.out.println("開始註冊");
-        }
+       if(!findByUsername(user)){
+           System.out.println("開始註冊Impl");
+           newUser.setUsername(user);
+           newUser.setPassword(password);
+           userRepo.save(newUser);
+           return true;
+       }else {
+           System.out.println("帳號重複");
+           return false;
+       }
     }
 }
